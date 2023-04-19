@@ -12,8 +12,6 @@ import Settings from "./Modules/Settings";
 import Login from "./Modules/Login";
 import ForgotPassword from "./Modules/ForgotPassword";
 
-import "@fontsource/lexend";
-
 export default function Router() {
   return (
     <BrowserRouter>
