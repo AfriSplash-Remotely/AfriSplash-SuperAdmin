@@ -4,13 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthLayout from "./Layout/Auth.layout";
 import MainLayout from "@/Layout/Main.layout";
 
-import Profile from "./Modules/Profile";
+import Dashboard from "./Modules/Dashboard";
 import Jobs from "./Modules/Jobs";
-import Messages from "./Modules/Messages";
 import Forum from "./Modules/Forum";
 import Settings from "./Modules/Settings";
 import Login from "./Modules/Login";
 import ForgotPassword from "./Modules/ForgotPassword";
+import "@fontsource/inter";
 
 export default function Router() {
   return (
@@ -22,9 +22,8 @@ export default function Router() {
         </Route>
 
         <Route path="/dashboard" element={<MainLayout />}>
-          <Route path="" index element={<Profile />} />
+          <Route path="" index element={<Dashboard />} />
           <Route path="jobs" element={<Jobs />} />
-          <Route path="messages" element={<Messages />} />
           <Route path="forum" element={<Forum />} />
           <Route path="settings" element={<Settings />} />
         </Route>
