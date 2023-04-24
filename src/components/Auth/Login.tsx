@@ -2,6 +2,8 @@ import { Box, Button, Input, InputGroup, InputLeftElement, Text } from '@chakra-
 import React from 'react'
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlineLockOpen } from "react-icons/hi";
+import { Link } from "react-router-dom";
+
 
 
 export default function LogIn(): JSX.Element {
@@ -27,7 +29,9 @@ export default function LogIn(): JSX.Element {
                 </InputGroup>
             </Box>
             <Box display='flex' justifyContent='flex-end' mt='1rem'>
-                <Text>Forgot Password?</Text>
+                <Link to="/forgot-password">
+                    <Text as="u">Forgot Password?</Text>
+                </Link>
             </Box>
 
             <Box mt='2rem' display='flex' justifyContent='center'>
