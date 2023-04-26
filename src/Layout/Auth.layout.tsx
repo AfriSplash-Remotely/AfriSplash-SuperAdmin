@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Box, Image } from "@chakra-ui/react";
-import Logo from "../assets/AfriSplash-Logo.png"
+import Logo from "@/assets/AfriSplash-Logo.png"
 
 
 function AuthLayout(): JSX.Element {

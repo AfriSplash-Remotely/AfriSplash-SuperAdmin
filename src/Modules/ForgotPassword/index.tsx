@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Image, InputGroup, InputLeftElement, Input, Button } from "@chakra-ui/react";
-import forgotPassImg from "../../assets/forgot-password.svg"
+import forgotPassImg from "@/assets/forgot-password.svg"
 import { MdOutlineEmail } from "react-icons/md";
 import { useForm } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
