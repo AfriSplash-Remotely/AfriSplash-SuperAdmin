@@ -6,9 +6,3 @@ export const loginSchema = yup
     password: yup.string().required("Please enter your Password"),
   })
   .required();
-
-export const forgotPasswordSchema = yup
-  .object({
-    email: yup.string().email().required("Please enter your Email Address"),
-  })
-  .required();

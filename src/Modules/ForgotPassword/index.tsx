@@ -4,7 +4,7 @@ import forgotPassImg from "../../assets/forgot-password.svg"
 import { MdOutlineEmail } from "react-icons/md";
 import { useForm } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
-import { forgotPasswordSchema } from "@/yupSchema";
+import { forgotPasswordSchema } from "./forgotPasswordSchema";
 
 interface ForgotPasswordInput {
   email: string

@@ -5,7 +5,7 @@ import { HiOutlineLockOpen } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
-import { loginSchema } from '@/yupSchema';
+import { loginSchema } from './loginSchema';
 
 
 interface LoginInputs {
