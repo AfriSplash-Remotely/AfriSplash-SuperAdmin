@@ -20,7 +20,7 @@ function Nav(): JSX.Element {
   return (
     <Box {...dflex} paddingBottom="1.5rem" width="100%">
       <Box textTransform="capitalize" fontSize="2rem">
-        {pageTitle}
+        {pageTitle === "jobs" ? "Manage Jobs" : ""}
       </Box>
 
       <Box {...dflex} gap="2rem">

@@ -2,7 +2,7 @@ import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AuthLayout from "./Layout/Auth.layout";
-import MainLayout from "@/Layout/Main.layout";
+import MainLayout from "./Layout/Main.layout";
 
 import Dashboard from "./Modules/Dashboard";
 import Jobs from "./Modules/Jobs";
