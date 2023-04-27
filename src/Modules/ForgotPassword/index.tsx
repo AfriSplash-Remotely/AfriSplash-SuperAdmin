@@ -1,10 +1,10 @@
 import React from "react";
+import { useForm } from "react-hook-form"
+import { yupResolver } from '@hookform/resolvers/yup';
 import { Box, Text, Image, InputGroup, InputLeftElement, Input, Button } from "@chakra-ui/react";
 import forgotPassImg from "@/assets/forgot-password.svg"
 import { MdOutlineEmail } from "react-icons/md";
-import { useForm } from "react-hook-form"
-import { yupResolver } from '@hookform/resolvers/yup';
-import { forgotPasswordSchema } from "./forgotPasswordSchema";
+import { forgotPasswordSchema } from "./forgotPassword.schema";
 
 interface ForgotPasswordInput {
   email: string
@@ -38,7 +38,8 @@ function ForgotPassword(): JSX.Element {
       >
         <Image src={forgotPassImg} alt="forgotPassImg" />
         <Text fontSize='3xl' textAlign='center' fontWeight='bold'>Forgot  password?</Text>
-        <Text textAlign='center' textColor='#606172' mt='1rem'>Enter your email address and we’ll send you instructions on how to reset your password.</Text>
+        <Text textAlign='center' textColor='#606172' mt='1rem'>Enter your email address and we’ll send
+          you instructions on how to reset your password.</Text>
 
         <Box as='form' onSubmit={handleSubmit(onSubmit)}>
           <Box py='1rem'>
