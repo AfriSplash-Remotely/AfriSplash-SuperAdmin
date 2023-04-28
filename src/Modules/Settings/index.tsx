@@ -1,8 +1,8 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 
-function Settings(): JSX.Element {
-  return <Box>Settings page</Box>;
+function SettingsProfile(): JSX.Element {
+  return <Box>Settings Profile page</Box>;
 }
 
-export default Settings;
+export default SettingsProfile;
