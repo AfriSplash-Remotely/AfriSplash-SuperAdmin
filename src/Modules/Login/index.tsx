@@ -77,8 +77,6 @@ function Login(): JSX.Element {
 
         </Box>
       </Box>
-
-
     </Box>
   )
 }
