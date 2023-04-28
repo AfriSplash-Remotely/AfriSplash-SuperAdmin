@@ -20,33 +20,30 @@ function ForgotPassword(): JSX.Element {
 
   return (
     <Box
-      display='flex'
-      flexDirection='column'
-      justifyContent='center'
-      alignItems='center'
     >
       <Box
         py='1rem'
         w='576px'
         px='3rem'
-        boxShadow='md'
+        boxShadow='200'
         rounded='md'
         display='flex'
         justifyContent='center'
         flexDirection='column'
+        overflow="hidden"
 
       >
-        <Image src={forgotPassImg} alt="forgotPassImg" />
-        <Text fontSize='3xl' textAlign='center' fontWeight='bold'>Forgot  password?</Text>
+        <Image src={forgotPassImg} alt="forgotPassImg" width="80%" mx="auto" />
+        <Text fontSize={{ base: '3xl', md: '4xl' }} textAlign='center' fontWeight='600'>Forgot  password?</Text>
         <Text textAlign='center' textColor='#606172' mt='1rem'>Enter your email address and we’ll send
           you instructions on how to reset your password.</Text>
 
         <Box as='form' onSubmit={handleSubmit(onSubmit)}>
-          <Box py='1rem'>
+          <Box my='4.5rem'>
             <InputGroup>
               <InputLeftElement
                 pointerEvents='none'
-                children={<MdOutlineEmail color='#979797' />}
+                children={<MdOutlineEmail color='#979797' size="1.5rem" />}
               />
               <Input
                 type='email'
@@ -57,8 +54,8 @@ function ForgotPassword(): JSX.Element {
             </InputGroup>
             <Text as='span' color='error'>{errors.email?.message}</Text>
           </Box>
-          <Box mt='1rem' display='flex' justifyContent='center'>
-            <Button size='md' variant='secondary' width='100%' type="submit" >Log In</Button>
+          <Box display='flex' mb="1.5rem" justifyContent='center'>
+            <Button size='md' variant='secondary' width='100%' type="submit" >Submit</Button>
           </Box>
         </Box>
       </Box>
