@@ -6,18 +6,8 @@ import { MdPeopleOutline } from "react-icons/md";
 import { TbArrowNarrowRight } from "react-icons/tb";
 
 const Cards = (): JSX.Element => {
-  const CardData = [1, 2, 3, 4, 5, 6];
-  return (
-    <Box
-      pt={{ base: "1rem", md: "2.5rem", lg: "3.188rem" }}
-      display="flex"
-      flexWrap="wrap"
-      gap={{ base: "1.5rem", md: "2rem", lg: "2rem" }}
-    >
-      {CardData.map((c, index) => {
-        return (
-          <Box
-            w={{ base: "100%", md: "22.604rem", lg: "22.604rem" }}
+  return <Box
+    w="100%"
             bgColor="#ffffff"
             px={{ base: ".8rem", md: ".875rem", lg: "0.875rem" }}
             py={{ base: "1.5rem", md: "1.5rem", lg: "1.5rem" }}
@@ -25,8 +15,7 @@ const Cards = (): JSX.Element => {
             boxShadow="0px 4px 12px rgba(194, 194, 194, 0.2)"
             display="flex"
             flexDir="column"
-            alignItems="center"
-            key={index}
+    alignItems="center"
           >
             <Box w={{ base: "5rem", md: "6.25rem", lg: "6.25rem" }}>
               <Image
@@ -91,10 +80,7 @@ const Cards = (): JSX.Element => {
               </Button>
             </Box>
           </Box>
-        );
-      })}
-    </Box>
-  );
+
 };
 
 export default Cards;
