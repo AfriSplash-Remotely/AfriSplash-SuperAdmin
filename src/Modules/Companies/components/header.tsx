@@ -1,4 +1,4 @@
-import { Box, Divider, HStack, Input, Text } from "@chakra-ui/react";
+import { Box, Divider, HStack, Input, Select, Text } from "@chakra-ui/react";
 import { AiFillCaretDown } from "react-icons/ai";
 
 const CompaniesHeader = (): JSX.Element => {
@@ -28,7 +28,7 @@ const CompaniesHeader = (): JSX.Element => {
           bgColor="#F4F4F4"
           borderRadius="0.375rem"
           h={{ lg: "2.188rem" }}
-          w={{ lg: "20rem" }}
+          w={{ lg: "17rem", "2xl": "30rem" }}
           border="none"
         />
       </Box>
@@ -46,46 +46,58 @@ const CompaniesHeader = (): JSX.Element => {
           bgColor="#F4F4F4"
           borderRadius="0.375rem"
           h={{ lg: "2.188rem" }}
-          w={{ lg: "20rem" }}
+          w={{ lg: "17rem", "2xl": "30rem" }}
           border="none"
         />
       </Box>
 
       <Divider orientation="vertical" h="100%" />
 
-      <HStack spacing={4}>
-        <Text
-          fontSize={{ base: ".9rem", md: "1rem", lg: "1rem" }}
+      <Box>
+        <Select
+          placeholder="Date Posted"
+          border="none"
+          fontSize={{ base: ".9rem", md: "1rem", lg: ".9rem" }}
           fontWeight="500"
+          icon={<AiFillCaretDown />}
+          iconSize="0.813rem"
         >
-          Date Posted
-        </Text>
-        <AiFillCaretDown size={13} />
-      </HStack>
+          <option>1st Jan, 2022</option>
+          <option>4th Jan, 2022</option>
+        </Select>
+      </Box>
 
       <Divider orientation="vertical" h="100%" />
 
-      <HStack spacing={4}>
-        <Text
-          fontSize={{ base: ".9rem", md: "1rem", lg: "1rem" }}
+      <Box>
+        <Select
+          placeholder="Job Type"
+          border="none"
+          fontSize={{ base: ".9rem", md: "1rem", lg: ".9rem" }}
           fontWeight="500"
+          icon={<AiFillCaretDown />}
+          iconSize="0.813rem"
         >
-          Job Type
-        </Text>
-        <AiFillCaretDown size={13} />
-      </HStack>
+          <option>Web Development</option>
+          <option>UI/UX Design</option>
+        </Select>
+      </Box>
 
       <Divider orientation="vertical" h="100%" />
 
-      <HStack spacing={4}>
-        <Text
-          fontSize={{ base: ".9rem", md: "1rem", lg: "1rem" }}
+      <Box>
+        <Select
+          placeholder="Salary"
+          border="none"
+          fontSize={{ base: ".9rem", md: "1rem", lg: ".9rem" }}
           fontWeight="500"
+          icon={<AiFillCaretDown />}
+          iconSize="0.813rem"
         >
-          Salary
-        </Text>
-        <AiFillCaretDown size={13} />
-      </HStack>
+          <option>$2,000</option>
+          <option>$5,000</option>
+        </Select>
+      </Box>
     </Box>
   );
 };

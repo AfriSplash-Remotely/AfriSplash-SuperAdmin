@@ -1,21 +1,16 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Image,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import Logo from "../../../assets/logo.svg";
 import { RiBankFill } from "react-icons/ri";
 import { TiLocationArrow } from "react-icons/ti";
 import { MdPeopleOutline } from "react-icons/md";
 import { TbArrowNarrowRight } from "react-icons/tb";
-import CompaniesCardModal from "./companies_card_modal";
+import PropTypes, { InferProps } from "prop-types";
 
-const Cards = (): JSX.Element => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+const cardProps = {
+  onOpen: PropTypes.func.isRequired,
+};
+
+const Cards = ({ onOpen }: InferProps<typeof cardProps>): JSX.Element => {
   return (
     <>
       <Box
@@ -28,8 +23,6 @@ const Cards = (): JSX.Element => {
         display="flex"
         flexDir="column"
         alignItems="center"
-        cursor="pointer"
-        onClick={onOpen}
       >
         <Box w={{ base: "5rem", md: "6.25rem", lg: "6.25rem" }}>
           <Image src={Logo} alt="Logo" w="100%" h="100%" objectFit="contain" />
@@ -83,12 +76,14 @@ const Cards = (): JSX.Element => {
             w="100%"
             py={{ lg: "1.5rem" }}
             rightIcon={<TbArrowNarrowRight size={24} />}
+            onClick={() => onOpen()}
+            _hover={{ bgColor: "primary" }}
+            _active={{ bgColor: "primary" }}
           >
             12 open roles
           </Button>
         </Box>
       </Box>
-      <CompaniesCardModal isOpen={isOpen} onClose={onClose} />
     </>
   );
 };
