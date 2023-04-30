@@ -8,8 +8,8 @@ const CompaniesHeader = (): JSX.Element => {
       px={{ base: "1rem", md: "2rem", lg: "2.5rem" }}
       h={{ base: "3.5rem", md: "3.5rem", lg: "3.438rem" }}
       bgColor="#ffffff"
-      borderRadius="0.75rem"
-      boxShadow="0px 4px 12px rgba(194, 194, 194, 0.2)"
+      borderRadius="xl"
+      boxShadow="100"
       mt={{ lg: "3.563rem" }}
       display="flex"
       alignItems="center"
