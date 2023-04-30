@@ -7,6 +7,7 @@ import SettingsLayout from "@/Layout/Settings.layout";
 
 import Dashboard from "./Modules/Dashboard";
 import Jobs from "./Modules/Jobs";
+import Companies from "./Modules/Companies";
 import Forum from "./Modules/Forum";
 import SettingsProfile from "./Modules/Settings";
 import Login from "@/Modules/Login";
@@ -29,6 +30,7 @@ export default function Router() {
         <Route path="/dashboard" element={<MainLayout />}>
           <Route path="" index element={<Dashboard />} />
           <Route path="jobs" element={<Jobs />} />
+          <Route path="companies" element={<Companies />} />
           <Route path="forum" element={<Forum />} />
 
           <Route path="settings" element={<SettingsLayout />}>
