@@ -1,8 +1,8 @@
 import { Table, TableContainer, Tbody } from "@chakra-ui/react";
-import { CgMoreVertical } from "react-icons/cg";
-import { AdminTableData, IAdminTableResponsePayload } from "./admin_table_data";
+import { AdminTableData } from "./admin_table_data";
 import { AdminTableHeader } from "./admin_table_header";
 import { AdminTableBody } from "./admin_table_body";
+import { IAdminTableResponsePayload } from "./admin.interface";
 
 const AdminTable = (): JSX.Element => {
   return (

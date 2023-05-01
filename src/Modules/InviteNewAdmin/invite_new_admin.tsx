@@ -10,7 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-const InviteNewAdmin = (): JSX.Element => {
+const InviteNewAdminForm = (): JSX.Element => {
   const UsersPermissionData: Array<{ permission: string }> = [
     {
       permission: "Manage jobs access",
@@ -72,7 +72,7 @@ const InviteNewAdmin = (): JSX.Element => {
               flexDir="column"
               gap="1rem"
             >
-              {UsersPermissionData.map((p) => {
+              {UsersPermissionData.map((permission) => {
                 return (
                   <Box
                     w="100%"
@@ -83,7 +83,7 @@ const InviteNewAdmin = (): JSX.Element => {
                   >
                     <HStack spacing={3}>
                       <Checkbox size="lg" bgColor="white" />
-                      <Text>{p.permission}</Text>
+                      <Text>{permission.permission}</Text>
                     </HStack>
                   </Box>
                 );
@@ -107,4 +107,4 @@ const InviteNewAdmin = (): JSX.Element => {
   );
 };
 
-export default InviteNewAdmin;
+export default InviteNewAdminForm;

@@ -19,10 +19,14 @@ export const AdminTableHeader = (): JSX.Element => {
     <>
       <Thead bgColor="primary" h={{ lg: "4.375rem" }}>
         <Tr>
-          {tableHeaderTitle.map((t) => {
+          {tableHeaderTitle.map((tableData) => {
             return (
-              <Th color="white" textTransform="capitalize" key={t.title}>
-                {t.title}
+              <Th
+                color="white"
+                textTransform="capitalize"
+                key={tableData.title}
+              >
+                {tableData.title}
               </Th>
             );
           })}

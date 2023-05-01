@@ -17,7 +17,7 @@ import SettingsPasswordReset from "@/Modules/Settings/PasswordReset";
 
 import "@fontsource/inter";
 import Admins from "./Modules/Admins";
-import InviteNewAdmin from "./Modules/Admins/components/invite_new_admin";
+import InviteNewAdmin from "./Modules/InviteNewAdmin";
 
 // SettingsLayout
 export default function Router() {
@@ -35,7 +35,7 @@ export default function Router() {
           <Route path="companies" element={<Companies />} />
           <Route path="forum" element={<Forum />} />
           <Route path="admins" element={<Admins />} />
-          <Route path="admins/invite_new_admin" element={<InviteNewAdmin />} />
+          <Route path="admins/invite-new-admin" element={<InviteNewAdmin />} />
 
           <Route path="settings" element={<SettingsLayout />}>
             <Route path="" element={<SettingsProfile />} />

@@ -1,8 +1,4 @@
-export interface IAdminTableResponsePayload {
-  name: string;
-  permission: string;
-  status: string;
-}
+import { IAdminTableResponsePayload } from "./admin.interface";
 
 export const AdminTableData: Array<IAdminTableResponsePayload> = [
   { name: "Arlene McCoy", permission: "Admin", status: "Active" },

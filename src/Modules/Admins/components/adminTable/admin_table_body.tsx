@@ -1,10 +1,9 @@
 import { Menu, MenuButton, MenuItem, MenuList, Td, Tr } from "@chakra-ui/react";
 import { CgMoreVertical } from "react-icons/cg";
-import { IAdminTableResponsePayload } from "./admin_table_data";
-
-interface AdminTableBodyProps {
-  item: IAdminTableResponsePayload;
-}
+import {
+  AdminTableBodyProps,
+  IAdminTableResponsePayload,
+} from "./admin.interface";
 
 export const AdminTableBody = ({ item }: AdminTableBodyProps): JSX.Element => {
   return (

@@ -6,7 +6,7 @@ const AddNewAdminButton = (): JSX.Element => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/dashboard/admins/invite_new_admin");
+    navigate("/dashboard/admins/invite-new-admin");
   };
   return (
     <Box
