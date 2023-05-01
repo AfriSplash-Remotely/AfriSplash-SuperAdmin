@@ -80,6 +80,7 @@ const InviteNewAdminForm = (): JSX.Element => {
                     py={{ base: ".5rem", md: ".6rem", lg: ".75rem" }}
                     px={{ base: ".5rem", md: ".6rem", lg: ".75rem" }}
                     borderRadius="lg"
+                    key={permission.permission}
                   >
                     <HStack spacing={3}>
                       <Checkbox size="lg" bgColor="white" />
