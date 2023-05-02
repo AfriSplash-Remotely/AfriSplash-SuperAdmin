@@ -4,12 +4,10 @@ import AdminTable from "./components/adminTable/AdminTable";
 
 const Admins = (): JSX.Element => {
   return (
-    <>
-      <Box overflow="hidden">
-        <AddNewAdminButton />
-        <AdminTable />
-      </Box>
-    </>
+    <Box>
+      <AddNewAdminButton />
+      <AdminTable />
+    </Box>
   );
 };
 

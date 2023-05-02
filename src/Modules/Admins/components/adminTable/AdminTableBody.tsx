@@ -8,7 +8,7 @@ import {
 export const AdminTableBody = ({ item }: AdminTableBodyProps): JSX.Element => {
   return (
     <>
-      <Tr _hover={{ bgColor: "#F3FAF5" }} _active={{ bgColor: "#F3FAF5" }}>
+      <Tr _hover={{ bgColor: "#F3FAF5", borderLeft: "0.2rem solid #0D5520" }}>
         <Td>{item.name}</Td>
         <Td>{item.permission}</Td>
         <Td>{item.status}</Td>
