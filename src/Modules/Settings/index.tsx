@@ -15,7 +15,7 @@ import { SettingsProfile } from "./settings.types";
 import { ProfileSchema } from "./settings.schema";
 
 export default function SettingsProfile(): JSX.Element {
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isDisabled, setIsDisabled] = useState<boolean>(true);
 
   const { register, handleSubmit } = useForm<SettingsProfile>({
     resolver: yupResolver(ProfileSchema),
