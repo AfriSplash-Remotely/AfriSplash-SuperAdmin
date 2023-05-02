@@ -28,11 +28,7 @@ const schema = yup.object().shape({
 export default function SettingsProfile(): JSX.Element {
   const [isDisabled, setIsDisabled] = useState(true);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<SettingsProfile>({
+  const { register, handleSubmit } = useForm<SettingsProfile>({
     resolver: yupResolver(schema),
   });
 
