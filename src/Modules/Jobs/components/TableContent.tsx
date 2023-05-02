@@ -39,21 +39,21 @@ const JobInfo: JobInfo[] = [
     title: "Admin",
     location: "Angola",
     status: "Active",
-    action: <AiOutlineMore className="ml-auto" />,
+    action: <AiOutlineMore />,
   },
   {
     companyName: "Annette Black",
     title: "Blog Editor",
     location: "South Africa",
     status: "Offline",
-    action: <AiOutlineMore className="ml-auto" />,
+    action: <AiOutlineMore />,
   },
   {
     companyName: "Savannah Nguyen",
     title: "Recruiter",
     location: "Kenya",
     status: "Active",
-    action: <AiOutlineMore className="ml-auto" />,
+    action: <AiOutlineMore />,
   },
 
   {
@@ -61,14 +61,14 @@ const JobInfo: JobInfo[] = [
     title: "Recruiter",
     location: "Ghana",
     status: "Offline",
-    action: <AiOutlineMore className="ml-auto" />,
+    action: <AiOutlineMore />,
   },
   {
     companyName: "Marvin McKinney",
     title: "Blog Editor",
     location: "Remote",
     status: "Revoked",
-    action: <AiOutlineMore className="ml-auto" />,
+    action: <AiOutlineMore />,
   },
 ];
 
