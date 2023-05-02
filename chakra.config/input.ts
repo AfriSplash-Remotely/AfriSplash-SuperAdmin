@@ -7,13 +7,19 @@ const Input = {
         borderWeight: '1px',
         border: '1px solid',
         borderColor: 'gray.200',
+        backgroundColor: '#fff',
         borderStyle: 'solid',
+        _placeholder: { color: 'gray.400', fontSize: '1rem' },
+        ':hover': {
+          background: 'gray.100',
+        },
       },
     },
     outline: {
       field: {
         padding: '0.625rem',
         background: '#fff',
+        backgroundColor: '#fff',
         border: '1px solid #F1F5F9',
         borderWeight: '1px',
         borderColor: 'gray.200',

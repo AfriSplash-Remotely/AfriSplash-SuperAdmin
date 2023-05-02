@@ -2,16 +2,24 @@ import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AuthLayout from "./Layout/Auth.layout";
-import MainLayout from "./Layout/Main.layout";
+import MainLayout from "@/Layout/Main.layout";
+import SettingsLayout from "@/Layout/Settings.layout";
 
 import Dashboard from "./Modules/Dashboard";
 import Jobs from "./Modules/Jobs";
-import Forum from "./Modules/Forum";
-import Settings from "./Modules/Settings";
-import Login from "./Modules/Login";
-import ForgotPassword from "./Modules/ForgotPassword";
+import Companies from "@/Modules/Companies";
+import Forum from "@/Modules/Forum";
+import SettingsProfile from "@/Modules/Settings";
+import Login from "@/Modules/Login";
+import ForgotPassword from "@/Modules/ForgotPassword";
+import SettingsNotification from "@/Modules/Settings/Notification";
+import SettingsPasswordReset from "@/Modules/Settings/PasswordReset";
+import Admins from "@/Modules/Admins";
+import InviteNewAdmin from "@/Modules/InviteNewAdmin";
+
 import "@fontsource/inter";
 
+// SettingsLayout
 export default function Router() {
   return (
     <BrowserRouter>
@@ -24,8 +32,16 @@ export default function Router() {
         <Route path="/dashboard" element={<MainLayout />}>
           <Route path="" index element={<Dashboard />} />
           <Route path="jobs" element={<Jobs />} />
+          <Route path="companies" element={<Companies />} />
           <Route path="forum" element={<Forum />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="admins" element={<Admins />} />
+          <Route path="admins/invite-new-admin" element={<InviteNewAdmin />} />
+
+          <Route path="settings" element={<SettingsLayout />}>
+            <Route path="" element={<SettingsProfile />} />
+            <Route path="password-reset" element={<SettingsPasswordReset />} />
+            <Route path="notification" element={<SettingsNotification />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
