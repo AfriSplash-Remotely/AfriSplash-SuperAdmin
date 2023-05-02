@@ -9,27 +9,16 @@ import {
   Input,
   Avatar,
 } from "@chakra-ui/react";
-import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-
-type SettingsProfile = {
-  email: string;
-  name: string;
-  surname: string;
-};
-
-const schema = yup.object().shape({
-  email: yup.string().email(),
-  name: yup.string(),
-  surname: yup.string(),
-});
+import { SettingsProfile } from "./settings.types";
+import { ProfileSchema } from "./settings.schema";
 
 export default function SettingsProfile(): JSX.Element {
   const [isDisabled, setIsDisabled] = useState(true);
 
   const { register, handleSubmit } = useForm<SettingsProfile>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(ProfileSchema),
   });
 
   const onSubmit = (data: SettingsProfile) => console.log(data);

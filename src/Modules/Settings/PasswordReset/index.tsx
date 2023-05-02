@@ -9,18 +9,11 @@ import {
   InputGroup,
   InputLeftElement,
 } from "@chakra-ui/react";
-import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import SmsIcon from "@/assets/smsIcon";
-
-type SettingsPasswordReset = {
-  email: string;
-};
-
-const schema = yup.object().shape({
-  email: yup.string().email().required(),
-});
+import { MdOutlineEmail } from "react-icons/md";
+import { SettingsPasswordReset } from "../settings.types";
+import { ResetSchema } from "../settings.schema";
 
 export default function SettingsPasswordReset(): JSX.Element {
   const {
@@ -28,10 +21,11 @@ export default function SettingsPasswordReset(): JSX.Element {
     handleSubmit,
     formState: { errors },
   } = useForm<SettingsPasswordReset>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(ResetSchema),
   });
 
   const onSubmit = (data: SettingsPasswordReset) => console.log(data);
+
   return (
     <Box
       display="flex"
@@ -51,7 +45,10 @@ export default function SettingsPasswordReset(): JSX.Element {
       <Box as="form" w="400px" py="1rem" onSubmit={handleSubmit(onSubmit)}>
         <FormControl mb="1rem">
           <InputGroup>
-            <InputLeftElement pointerEvents="none" children={<SmsIcon />} />
+            <InputLeftElement
+              pointerEvents="none"
+              children={<MdOutlineEmail color="#979797" size="1.5rem" />}
+            />
             <Input
               type="email"
               variant="filled"
