@@ -70,8 +70,8 @@ export default function SettingsNotification(): JSX.Element {
           </Stack>
         </CardBody>
         <CardFooter overflow="hidden" padding={0}>
-          <Box width="100%" bg="#D6ECDC" borderRadius="0" p="1rem">
-            <Text color="#0D5520" fontSize=".75rem">
+          <Box width="100%" bg="primaryLight" borderRadius="0" p="1rem">
+            <Text color="primary" fontSize=".75rem">
               Read More About Notification Methods
             </Text>
           </Box>
