@@ -1,7 +1,7 @@
 import { Table, TableContainer, Tbody } from "@chakra-ui/react";
-import { AdminTableData } from "./admin_table_data";
-import { AdminTableHeader } from "./admin_table_header";
-import { AdminTableBody } from "./admin_table_body";
+import { AdminTableData } from "./AdminTableData";
+import { AdminTableHeader } from "./AdminTableHeader";
+import { AdminTableBody } from "./AdminTableBody";
 import { IAdminTableResponsePayload } from "./admin.interface";
 
 const AdminTable = (): JSX.Element => {

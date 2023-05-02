@@ -14,10 +14,10 @@ import Login from "@/Modules/Login";
 import ForgotPassword from "@/Modules/ForgotPassword";
 import SettingsNotification from "@/Modules/Settings/Notification";
 import SettingsPasswordReset from "@/Modules/Settings/PasswordReset";
+import Admins from "@/Modules/Admins";
+import InviteNewAdmin from "@/Modules/InviteNewAdmin";
 
 import "@fontsource/inter";
-import Admins from "./Modules/Admins";
-import InviteNewAdmin from "./Modules/InviteNewAdmin";
 
 // SettingsLayout
 export default function Router() {

@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
-import AddNewAdminButton from "./components/add_new_admin_button";
-import AdminTable from "./components/adminTable/admin_table";
+import AddNewAdminButton from "./components/AddNewAdminButton";
+import AdminTable from "./components/adminTable/AdminTable";
 
 const Admins = (): JSX.Element => {
   return (
