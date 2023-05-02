@@ -14,7 +14,7 @@ function SettingsNav(): JSX.Element {
       borderColor="white"
       overflow="hidden"
       minWidth="max-content"
-      width={{ base: "100%", md: "50%", xl: "40%" }}
+      width={{ base: "100%", md: "50%" }}
       marginX="auto"
     >
       {settingsLinkItems.map((link) => {
