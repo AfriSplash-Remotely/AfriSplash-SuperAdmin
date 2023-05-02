@@ -1,4 +1,4 @@
-import { Box, Divider, HStack, Input, Select, Text } from "@chakra-ui/react";
+import { Box, Divider, Input, Select } from "@chakra-ui/react";
 import { AiFillCaretDown } from "react-icons/ai";
 
 const CompaniesHeader = (): JSX.Element => {

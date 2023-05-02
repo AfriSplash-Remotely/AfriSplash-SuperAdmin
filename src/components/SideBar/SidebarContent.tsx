@@ -1,9 +1,19 @@
-import { Box, Flex, Image, CloseButton, useColorModeValue, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  CloseButton,
+  useColorModeValue,
+  Button,
+} from "@chakra-ui/react";
 import logo from "@/assets/logo.svg";
 import { NavItem, SidebarProps, linkItems } from "./index";
 import { MdLogout } from "react-icons/md";
 
-export default function SidebarContent({ onClose, ...rest }: SidebarProps): JSX.Element {
+export default function SidebarContent({
+  onClose,
+  ...rest
+}: SidebarProps): JSX.Element {
   return (
     <Box
       transition="3s ease"
@@ -17,14 +27,27 @@ export default function SidebarContent({ onClose, ...rest }: SidebarProps): JSX.
       paddingY="1rem"
       {...rest}
     >
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between" mb="4rem">
+      <Flex
+        h="20"
+        alignItems="center"
+        mx="8"
+        justifyContent="space-between"
+        mb="4rem"
+      >
         <Box>
           <Image src={logo} />
         </Box>
-        <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
+        <CloseButton
+          display={{ base: "flex", md: "none" }}
+          onClick={onClose}
+        />
       </Flex>
       {linkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon} url={link.url}>
+        <NavItem
+          key={link.name}
+          icon={link.icon}
+          url={link.url}
+        >
           {link.name}
         </NavItem>
       ))}

@@ -7,9 +7,9 @@ import SettingsLayout from "@/Layout/Settings.layout";
 
 import Dashboard from "./Modules/Dashboard";
 import Jobs from "./Modules/Jobs";
-import Companies from "./Modules/Companies";
-import Forum from "./Modules/Forum";
-import SettingsProfile from "./Modules/Settings";
+import Companies from "@/Modules/Companies";
+import Forum from "@/Modules/Forum";
+import SettingsProfile from "@/Modules/Settings";
 import Login from "@/Modules/Login";
 import ForgotPassword from "@/Modules/ForgotPassword";
 import SettingsNotification from "@/Modules/Settings/Notification";
