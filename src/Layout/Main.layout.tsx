@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Box, useColorModeValue, useDisclosure } from "@chakra-ui/react";
-import { SidebarContent } from "@/components/SideBar";
-import Nav from "@/components/Nav";
+import { SidebarContent } from "../components/SideBar"
+import Nav from "../components/Nav";
 
 function MainLayout(): JSX.Element {
   const { isOpen, onOpen, onClose } = useDisclosure();
