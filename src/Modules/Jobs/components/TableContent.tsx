@@ -14,10 +14,12 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 import { AiOutlineMore } from "react-icons/ai";
 import { CgMoreVertical } from "react-icons/cg";
+import JobDetails from "./JobDetails";
 
 const dflex = {
   display: "flex",
@@ -73,6 +75,8 @@ const JobInfo: JobInfo[] = [
 ];
 
 function TableContent(): JSX.Element {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
     <Box boxShadow="100" borderRadius="xl" overflow="hidden" bg="white">
       <TableContainer>
@@ -100,7 +104,9 @@ function TableContent(): JSX.Element {
             {JobInfo.map((details, index) => {
               const { companyName, title, location, status, action } = details;
               return (
+                <>
                 <Tr
+                    onClick={onOpen}
                   key={index}
                   padding="2"
                   cursor="pointer"
@@ -157,6 +163,8 @@ function TableContent(): JSX.Element {
                     </Menu>
                   </Td>
                 </Tr>
+                  <JobDetails isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+                </>
               );
             })}
           </Tbody>
