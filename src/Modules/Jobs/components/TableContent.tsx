@@ -162,12 +162,13 @@ function TableContent(): JSX.Element {
                       </MenuList>
                     </Menu>
                   </Td>
-                </Tr>
-                  <JobDetails isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+                  </Tr>
                 </>
               );
             })}
+
           </Tbody>
+          <JobDetails isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         </Table>
       </TableContainer>
 
