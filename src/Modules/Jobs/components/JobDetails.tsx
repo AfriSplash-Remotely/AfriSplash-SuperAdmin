@@ -1,4 +1,5 @@
 import React from 'react'
+import { InferProps } from "prop-types";
 import {
     Box,
     Text,
@@ -10,14 +11,10 @@ import {
     DrawerOverlay,
     Divider
 } from '@chakra-ui/react'
+import JobDetailsProps from './job_details_props';
 
-interface JobDetailsProps {
-    isOpen: boolean,
-    onOpen: () => void,
-    onClose: () => void
-}
 
-export default function JobDetails({ isOpen, onClose }: JobDetailsProps): JSX.Element {
+export default function JobDetails({ isOpen, onClose }: InferProps<typeof JobDetailsProps>): JSX.Element {
     return (
         <Box>
             <Drawer
@@ -26,7 +23,7 @@ export default function JobDetails({ isOpen, onClose }: JobDetailsProps): JSX.El
                 onClose={onClose}
                 size="sm"
             >
-                <DrawerOverlay bg="rgba(0, 0, 0, 0.2)" />
+                <DrawerOverlay />
                 <DrawerContent>
                     <DrawerHeader color="#000000" fontSize='xl'>Front End Developer</DrawerHeader>
                     <DrawerBody>
