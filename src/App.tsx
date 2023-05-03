@@ -16,6 +16,7 @@ import SettingsNotification from "@/Modules/Settings/Notification";
 import SettingsPasswordReset from "@/Modules/Settings/PasswordReset";
 import Admins from "@/Modules/Admins";
 import InviteNewAdmin from "@/Modules/InviteNewAdmin";
+import Talents from "@/Modules/Talents";
 
 import "@fontsource/inter";
 
@@ -33,6 +34,7 @@ export default function Router() {
           <Route path="" index element={<Dashboard />} />
           <Route path="jobs" element={<Jobs />} />
           <Route path="companies" element={<Companies />} />
+          <Route path="talents" element={<Talents />} />
           <Route path="forum" element={<Forum />} />
           <Route path="admins" element={<Admins />} />
           <Route path="admins/invite-new-admin" element={<InviteNewAdmin />} />
