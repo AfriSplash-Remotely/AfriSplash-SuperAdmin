@@ -11,7 +11,7 @@ import {
     DrawerOverlay,
     Divider
 } from '@chakra-ui/react'
-import JobDetailsProps from './job_details_props';
+import JobDetailsProps from './jobDetailsProps';
 
 
 export default function JobDetails({ isOpen, onClose }: InferProps<typeof JobDetailsProps>): JSX.Element {
