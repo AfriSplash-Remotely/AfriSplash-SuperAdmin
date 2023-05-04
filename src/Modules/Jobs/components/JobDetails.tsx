@@ -11,6 +11,7 @@ import {
     DrawerOverlay,
     Divider
 } from '@chakra-ui/react'
+import LoadApplicants from './LoadApplicants';
 import JobDetailsProps from './jobDetailsProps';
 
 
@@ -50,6 +51,9 @@ export default function JobDetails({ isOpen, onClose }: InferProps<typeof JobDet
                         <Box display='flex' alignItems='center' justifyContent='space-between' py='2rem'>
                             <Text color="#8C8C8C">1st, April 2023</Text>
                             <Button size='md' variant='secondary'  >Load Applicants</Button>
+                        </Box>
+                        <Box>
+                            <LoadApplicants />
                         </Box>
                     </DrawerBody>
                 </DrawerContent>

@@ -101,12 +101,13 @@ function TableContent(): JSX.Element {
             </Tr>
           </Thead>
           <Tbody>
+            {/* onClick={onOpen} */}
+
             {JobInfo.map((details, index) => {
               const { companyName, title, location, status, action } = details;
               return (
                 <>
-                <Tr
-                    onClick={onOpen}
+                  <Tr
                   key={index}
                   padding="2"
                   cursor="pointer"
@@ -125,10 +126,11 @@ function TableContent(): JSX.Element {
                     borderLeft: "3px solid #0D5520",
                   }}
                 >
-                  <Td>{companyName}</Td>
-                  <Td>{title}</Td>
-                  <Td>{location}</Td>
-                  <Td>{status}</Td>
+                    <Td onClick={onOpen}>{companyName}</Td>
+                    <Td onClick={onOpen}>{title}</Td>
+                    <Td onClick={onOpen}>{location}</Td>
+                    <Td onClick={onOpen}>{status}</Td>
+
                   <Td textAlign="right">
                     <Menu>
                       <MenuButton>
@@ -168,9 +170,13 @@ function TableContent(): JSX.Element {
             })}
 
           </Tbody>
-          <JobDetails isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         </Table>
+
       </TableContainer>
+      <Box>
+        <JobDetails isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+      </Box>
+
 
       <Box paddingTop="5" paddingBottom="4">
         <Flex justifyContent="center" gap="4">
