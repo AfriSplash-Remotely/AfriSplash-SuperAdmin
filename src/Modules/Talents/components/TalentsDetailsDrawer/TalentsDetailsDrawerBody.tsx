@@ -1,9 +1,30 @@
-import { Box, Divider, HStack, Image, Text, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  HStack,
+  Image,
+  Text,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+} from "@chakra-ui/react";
 import ProfileImage from "../../../../assets/user-profile-image.png";
+import { Skills } from "./Skills";
+import { Experience } from "./Experience";
+import { Education } from "./Education";
+import { Projects } from "./Projects";
+import { Publications } from "./Publications";
+
+const textStyle = {
+  fontWeight: "500",
+  _selected: { color: "primary", borderBottom: ".2rem solid #0D5520" },
+};
 
 const TalentsDetailsDrawerBody = (): JSX.Element => {
   return (
-    <>
+    <Box fontFamily="mono">
       <Box pt={{ lg: "1.5rem" }} pb={{ lg: "1rem" }} px={{ lg: "1.5rem" }}>
         <Box
           overflow="hidden"
@@ -15,14 +36,14 @@ const TalentsDetailsDrawerBody = (): JSX.Element => {
           <Image alt="Uzor Samuel" src={ProfileImage} w="100%" h="100%" />
         </Box>
         <Box color="#000" w={{ lg: "21.875rem" }} fontSize={{ lg: ".875rem" }}>
-          <Text fontWeight="bold" fontSize={{ lg: "1.5rem" }}>
+          <Text fontWeight="500" fontSize={{ lg: "1.5rem" }}>
             Uzor Samuel
           </Text>
           <Text fontSize={{ lg: "0.875rem" }}>
             Am a frontend developer, with 6yrs experience in vuejs, React.js and
             typescript
           </Text>
-          <Text color="#858585" mt={{ lg: "1.5rem" }}>
+          <Text fontWeight="500" color="#858585" mt={{ lg: "1.5rem" }}>
             Lagos, Nigeria
           </Text>
         </Box>
@@ -31,7 +52,7 @@ const TalentsDetailsDrawerBody = (): JSX.Element => {
       <Divider />
 
       <Box px={{ lg: "1.5rem" }} py={{ lg: "2.3rem" }}>
-        <Text fontWeight="bold" fontSize={{ lg: "1.125rem" }}>
+        <Text fontWeight="500" fontSize={{ lg: "1.125rem" }}>
           Analytics
         </Text>
         <HStack
@@ -52,24 +73,41 @@ const TalentsDetailsDrawerBody = (): JSX.Element => {
 
       <Divider />
 
-      <Box pt={{ lg: "1rem" }}>
-        <Flex
-          px={{ lg: "1.5rem" }}
-          alignItems="center"
-          justifyContent="space-between"
-          fontSize="0.875rem"
-          color="#656565"
-          fontWeight="500"
-          w="100%"
-        >
-          <Text>Skills</Text>
-          <Text>Experience</Text>
-          <Text>Education</Text>
-          <Text>Projects</Text>
-          <Text>Publications</Text>
-        </Flex>
-      </Box>
-    </>
+      <Tabs
+        isFitted={true}
+        color="#656565"
+        w="100%"
+        pt={{ lg: "1.5rem" }}
+        colorScheme="primary"
+        size="sm"
+      >
+        <TabList>
+          <Tab {...textStyle}>Skills</Tab>
+          <Tab {...textStyle}>Experience</Tab>
+          <Tab {...textStyle}>Education</Tab>
+          <Tab {...textStyle}>Projects</Tab>
+          <Tab {...textStyle}>Publications</Tab>
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <Skills />
+          </TabPanel>
+          <TabPanel>
+            <Experience />
+          </TabPanel>
+          <TabPanel>
+            <Education />
+          </TabPanel>
+          <TabPanel>
+            <Projects />
+          </TabPanel>
+          <TabPanel>
+            <Publications />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+    </Box>
   );
 };
 

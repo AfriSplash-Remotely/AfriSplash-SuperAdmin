@@ -23,7 +23,7 @@ const TalentsHeader = (): JSX.Element => {
           placeholder="search term"
           _placeholder={{
             color: "#676767",
-            fontWeight: "bold",
+            fontWeight: "500",
           }}
           bgColor="#F4F4F4"
           borderRadius="0.375rem"
@@ -39,7 +39,7 @@ const TalentsHeader = (): JSX.Element => {
           placeholder="min profile view"
           _placeholder={{
             color: "#676767",
-            fontWeight: "bold",
+            fontWeight: "500",
           }}
           bgColor="#F4F4F4"
           borderRadius="0.375rem"
@@ -55,7 +55,7 @@ const TalentsHeader = (): JSX.Element => {
           placeholder="max profile view"
           _placeholder={{
             color: "#676767",
-            fontWeight: "bold",
+            fontWeight: "500",
           }}
           bgColor="#F4F4F4"
           borderRadius="0.375rem"

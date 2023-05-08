@@ -24,10 +24,10 @@ const TalentsDetailsDrawer = ({
         isOpen={isOpen}
         placement="right"
         onClose={onClose}
-        size={{ lg: "sm" }}
+        size={{ lg: "md" }}
       >
         <DrawerContent
-          h={{ lg: "90vh" }}
+          h={{ lg: "93vh" }}
           mr={{ lg: "2.313rem" }}
           mt={{ lg: "2.25rem" }}
           borderRadius="xl"

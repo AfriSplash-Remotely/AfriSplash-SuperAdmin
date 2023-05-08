@@ -24,7 +24,7 @@ export const SendEmailModal = ({
   return (
     <>
       <GeneralModalTwo isOpen={isOpen} onClose={onClose}>
-        <Box>
+        <Box fontFamily="mono">
           <Box
             bgColor="#F3F3F3"
             pt={{ lg: "1.5rem" }}
@@ -53,14 +53,14 @@ export const SendEmailModal = ({
               w={{ lg: "21.875rem" }}
               fontSize={{ lg: ".875rem" }}
             >
-              <Text fontWeight="bold" fontSize={{ lg: "1.5rem" }}>
+              <Text fontWeight="500" fontSize={{ lg: "1.5rem" }}>
                 Uzor Samuel
               </Text>
               <Text>
                 Am a frontend developer, with 6yrs experence in vuejs, React.js
                 and typescript
               </Text>
-              <Text color="#858585" mt={{ lg: "1.5rem" }}>
+              <Text fontWeight="500" color="#858585" mt={{ lg: "1.5rem" }}>
                 Lagos, Nigeria
               </Text>
             </Box>
@@ -74,7 +74,7 @@ export const SendEmailModal = ({
             pb={{ lg: ".75rem" }}
             px={{ lg: "1.5rem" }}
           >
-            <Text fontSize={{ lg: "1.125rem" }} fontWeight="bold">
+            <Text fontSize={{ lg: "1.125rem" }} fontWeight="500">
               write message
             </Text>
             <Textarea
