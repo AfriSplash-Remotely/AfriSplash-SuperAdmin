@@ -19,28 +19,22 @@ export const TalentsTableHeader = (): JSX.Element => {
     },
   ];
   return (
-    <>
-      <Thead
-        bgColor="primary"
-        h={{ lg: "4.375rem" }}
-        border="0.2rem"
-        borderStyle="solid"
-        borderColor="primary"
-      >
-        <Tr>
-          {tableHeaderTitle.map((tableData) => {
-            return (
-              <Th
-                color="white"
-                textTransform="capitalize"
-                key={tableData.title}
-              >
-                {tableData.title}
-              </Th>
-            );
-          })}
-        </Tr>
-      </Thead>
-    </>
+    <Thead
+      bgColor="primary"
+      h={{ lg: "4.375rem" }}
+      border="0.2rem"
+      borderStyle="solid"
+      borderColor="primary"
+    >
+      <Tr>
+        {tableHeaderTitle.map((tableData) => {
+          return (
+            <Th color="white" textTransform="capitalize" key={tableData.title}>
+              {tableData.title}
+            </Th>
+          );
+        })}
+      </Tr>
+    </Thead>
   );
 };

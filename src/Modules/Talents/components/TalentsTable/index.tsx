@@ -14,38 +14,42 @@ import { SendEmailModal } from "./SendEmailModal";
 import TalentsDetailsDrawer from "../TalentsDetailsDrawer";
 
 const TalentsTable = (): JSX.Element => {
-  const modal1 = useDisclosure();
-  const modal2 = useDisclosure();
+  const sendEmailModal = useDisclosure();
+  const talentsDetailsDrawer = useDisclosure();
   return (
-    <>
-      <Box
-        shadow="100"
-        borderRadius="1rem"
-        overflow="hidden"
-        mt={{ base: "1rem", md: "1.5rem", lg: "3rem" }}
-      >
-        <TableContainer bgColor="white">
-          <Table size="lg" variant="simple">
-            <TalentsTableHeader />
-            <Tbody>
-              {TalentsTableData.map((item: ITalentsTableResponsePayload) => {
-                return (
-                  <TalentsTableBody
-                    item={item}
-                    key={item.name}
-                    sendEmailModal={modal1.onOpen}
-                    openUserDetails={modal2.onOpen}
-                  />
-                );
-              })}
-            </Tbody>
-          </Table>
-          <TalentsTableFooter />
-        </TableContainer>
-        <SendEmailModal isOpen={modal1.isOpen} onClose={modal1.onClose} />
-        <TalentsDetailsDrawer isOpen={modal2.isOpen} onClose={modal2.onClose} />
-      </Box>
-    </>
+    <Box
+      shadow="100"
+      borderRadius="1rem"
+      overflow="hidden"
+      mt={{ base: "1rem", md: "1.5rem", lg: "3rem" }}
+    >
+      <TableContainer bgColor="white">
+        <Table size="lg" variant="simple">
+          <TalentsTableHeader />
+          <Tbody>
+            {TalentsTableData.map((item: ITalentsTableResponsePayload) => {
+              return (
+                <TalentsTableBody
+                  item={item}
+                  key={item.name}
+                  sendEmailModal={sendEmailModal.onOpen}
+                  openUserDetails={talentsDetailsDrawer.onOpen}
+                />
+              );
+            })}
+          </Tbody>
+        </Table>
+        <TalentsTableFooter />
+      </TableContainer>
+      <SendEmailModal
+        isOpen={sendEmailModal.isOpen}
+        onClose={sendEmailModal.onClose}
+      />
+      <TalentsDetailsDrawer
+        isOpen={talentsDetailsDrawer.isOpen}
+        onClose={talentsDetailsDrawer.onClose}
+      />
+    </Box>
   );
 };
 

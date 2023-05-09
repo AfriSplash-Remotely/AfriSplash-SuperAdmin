@@ -19,33 +19,31 @@ const TalentsDetailsDrawer = ({
   onClose,
 }: InferProps<typeof TalentsDetailsDrawerProps>): JSX.Element => {
   return (
-    <>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        size={{ lg: "md" }}
+    <Drawer
+      isOpen={isOpen}
+      placement="right"
+      onClose={onClose}
+      size={{ lg: "md" }}
+    >
+      <DrawerContent
+        h={{ lg: "93vh" }}
+        mr={{ lg: "2.313rem" }}
+        mt={{ lg: "2.25rem" }}
+        borderRadius="xl"
+        boxShadow="100"
+        overflow="hidden"
       >
-        <DrawerContent
-          h={{ lg: "93vh" }}
-          mr={{ lg: "2.313rem" }}
-          mt={{ lg: "2.25rem" }}
-          borderRadius="xl"
-          boxShadow="100"
-          overflow="hidden"
-        >
-          <DrawerHeader bgColor="#F3F3F3">
-            <Box onClick={onClose} cursor="pointer">
-              <MdClose />
-            </Box>
-          </DrawerHeader>
+        <DrawerHeader bgColor="#F3F3F3">
+          <Box onClick={onClose} cursor="pointer">
+            <MdClose />
+          </Box>
+        </DrawerHeader>
 
-          <DrawerBody paddingInlineStart={0} paddingInlineEnd={0}>
-            <TalentsDetailsDrawerBody />
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
-    </>
+        <DrawerBody paddingInlineStart={0} paddingInlineEnd={0}>
+          <TalentsDetailsDrawerBody />
+        </DrawerBody>
+      </DrawerContent>
+    </Drawer>
   );
 };
 

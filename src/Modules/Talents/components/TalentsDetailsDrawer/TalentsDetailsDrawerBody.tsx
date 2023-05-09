@@ -10,7 +10,7 @@ import {
   Tab,
   TabPanel,
 } from "@chakra-ui/react";
-import ProfileImage from "../../../../assets/user-profile-image.png";
+import ProfileImage from "@/assets/user-profile-image.png";
 import { Skills } from "./Skills";
 import { Experience } from "./Experience";
 import { Education } from "./Education";
