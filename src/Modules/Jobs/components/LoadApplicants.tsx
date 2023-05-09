@@ -1,21 +1,8 @@
 import React from 'react'
 import { Box, Input, Flex, Spacer, Divider, Text, Button, Avatar } from "@chakra-ui/react"
 import { BiFilter } from "react-icons/bi";
+import { applicantAvatar, applicantSummary } from './applicantsData';
 
-const applicantSummary = [
-    { title: "100 Men" },
-    { title: "20 Females" },
-    { title: "20 Others" }
-]
-
-const applicantAvatar = [
-    { name: "Mike Ross", src: "https://bit.ly/sage-adebayo" },
-    { name: "Emma Dev", src: "https://bit.ly/prosper-baba" },
-    { name: "Chief Geo", src: "https://bit.ly/ryan-florence" },
-    { name: "Harvery Specter", src: "https://bit.ly/sage-adebayo" },
-
-
-]
 export default function LoadApplicants() {
     return (
         <Box py='2rem'>

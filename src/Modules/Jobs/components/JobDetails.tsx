@@ -17,7 +17,7 @@ import JobDetailsProps from './jobDetailsProps';
 
 export default function JobDetails({ isOpen, onClose }: InferProps<typeof JobDetailsProps>): JSX.Element {
 
-    const [loadApplicants, setLoadApplicants] = useState(false)
+    const [loadApplicants, setLoadApplicants] = useState<boolean>(false)
 
     const toggleApplicants = () => {
         setLoadApplicants(!loadApplicants)
