@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { InferProps } from "prop-types";
 import {
     Box,
@@ -11,10 +11,17 @@ import {
     DrawerOverlay,
     Divider
 } from '@chakra-ui/react'
+import LoadApplicants from './LoadApplicants';
 import JobDetailsProps from './jobDetailsProps';
 
 
 export default function JobDetails({ isOpen, onClose }: InferProps<typeof JobDetailsProps>): JSX.Element {
+
+    const [loadApplicants, setLoadApplicants] = useState<boolean>(false)
+
+    const toggleApplicants = () => {
+        setLoadApplicants(!loadApplicants)
+    }
     return (
         <Box>
             <Drawer
@@ -49,8 +56,19 @@ export default function JobDetails({ isOpen, onClose }: InferProps<typeof JobDet
                         </Box>
                         <Box display='flex' alignItems='center' justifyContent='space-between' py='2rem'>
                             <Text color="#8C8C8C">1st, April 2023</Text>
-                            <Button size='md' variant='secondary'  >Load Applicants</Button>
+                            <Button
+                                size='md'
+                                variant='secondary'
+                                onClick={toggleApplicants}
+                            >Load Applicants</Button>
                         </Box>
+                        {
+                            loadApplicants ?
+                                <Box>
+                                    <LoadApplicants />
+                                </Box>
+                                : <></>
+                        }
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>
