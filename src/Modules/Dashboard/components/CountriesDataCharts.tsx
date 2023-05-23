@@ -1,15 +1,16 @@
 import { Box } from "@chakra-ui/react";
 import ReactApexChart from "react-apexcharts";
+import { ApexOptions } from 'apexcharts';
 
 export const CountriesDataCharts = (): JSX.Element => {
-  const series = [
+  const series: ApexOptions['series'] = [
     {
       name: "total users",
       data: [380, 280, 150, 230, 310, 250, 350, 80, 150, 400, 340, 200],
     },
   ];
 
-  const options = {
+  const options: ApexOptions = {
     colors: ["#0D5520"],
     chart: {
       height: 350,
