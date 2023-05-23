@@ -33,10 +33,6 @@ function Dashboard(): JSX.Element {
       figure: 1000,
       text: "Total Complents Today",
     },
-    // {
-    //   figure: 100,
-    //   text: "Total Companies",
-    // },
   ];
   return (
     <Box pt={{ lg: "2.5rem" }}>
@@ -46,7 +42,7 @@ function Dashboard(): JSX.Element {
         gap={{ base: "1rem", lg: "7.063rem" }}
       >
         <SimpleGrid
-          w={'100%'}
+          w={"100%"}
           columns={{ base: 2, sm: 2, md: 2, lg: 2 }}
           spacing={"1rem"}
         >
@@ -56,25 +52,28 @@ function Dashboard(): JSX.Element {
         </SimpleGrid>
 
         <Grid
-          w={'100%'}
-          templateRows='repeat(2, 1fr)'
-          templateColumns='repeat(4, 1fr)'
+          w={"100%"}
+          templateRows="repeat(2, 1fr)"
+          templateColumns="repeat(4, 1fr)"
           gap={4}
         >
           {CardDataTwo.map((data) => {
-            return <GridItem key={data.text} colSpan={[4, 2]}>
-              <DataCard data={data} />
-            </GridItem>
+            return (
+              <GridItem key={data.text} colSpan={[4, 2]}>
+                <DataCard data={data} />
+              </GridItem>
+            );
           })}
 
           <GridItem colSpan={4}>
-            <DataCard data={{
-              figure: 100,
-              text: "Total Companies",
-            }} />
+            <DataCard
+              data={{
+                figure: 100,
+                text: "Total Companies",
+              }}
+            />
           </GridItem>
         </Grid>
-
       </Box>
       <TalentsByCountry />
     </Box>

@@ -1,11 +1,16 @@
 import { Box, Card, CardBody, Text } from "@chakra-ui/react";
-import { CardDataType } from "../dashboard.interface";
+import PropTypes, { InferProps } from "prop-types";
 
-interface DataCardProps {
-  data: CardDataType;
-}
+const DataCardProps = {
+  data: {
+    figure: PropTypes.number.isRequired,
+    text: PropTypes.string.isRequired,
+  },
+};
 
-export const DataCard = ({ data }: DataCardProps): JSX.Element => {
+export const DataCard = ({
+  data,
+}: InferProps<typeof DataCardProps>): JSX.Element => {
   return (
     <Card w="100%" borderRadius="xl">
       <CardBody>
