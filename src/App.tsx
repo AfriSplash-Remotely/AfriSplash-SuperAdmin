@@ -7,6 +7,7 @@ import SettingsLayout from "@/Layout/Settings.layout";
 
 import Dashboard from "./Modules/Dashboard";
 import Jobs from "./Modules/Jobs";
+import Reports from "./Modules/Reports";
 import Companies from "@/Modules/Companies";
 import Forum from "@/Modules/Forum";
 import SettingsProfile from "@/Modules/Settings";
@@ -49,6 +50,7 @@ export default function Router() {
 
         <Route path="/dashboard" element={<MainLayout />}>
           <Route path="" index element={<Dashboard />} />
+          <Route path="reports" index element={<Reports />} />
           <Route path="jobs" element={<Jobs />} />
           <Route path="companies" element={<Companies />} />
           <Route path="talents" element={<Talents />} />
