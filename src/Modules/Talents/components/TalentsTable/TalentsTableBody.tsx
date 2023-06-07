@@ -22,7 +22,7 @@ export const TalentsTableBody = ({
             <CgMoreVertical />
           </MenuButton>
           <MenuList borderRadius="xl">
-            <MenuItem
+            <MenuItem 
               _hover={{ background: "#D9DEDC", color: "primary" }}
               _active={{ background: "#D9DEDC", color: "primary" }}
               onClick={() => sendEmailModal()}

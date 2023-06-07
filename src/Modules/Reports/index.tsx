@@ -13,15 +13,18 @@ import {
   TableContainer,
   Table,
   Tbody,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { AiFillCaretDown } from "react-icons/ai";
 import Hero from "./components/Hero";
 import ReportTableHeader from "./components/ReportTableHeader";
-import {reportInfo} from "./components/reportTableData";
+import { reportInfo } from "./components/reportTableData";
 import ReportTableBody from "./components/ReportTableBody";
 import { ReportTableInfo } from "./components/reports.interface";
+import ReportModal from "./components/ReportModal";
 
 function Reports(): JSX.Element {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box>
       <Hero />
@@ -36,11 +39,12 @@ function Reports(): JSX.Element {
             <ReportTableHeader />
             <Tbody>
               {reportInfo.map((item: ReportTableInfo) => {
-                return <ReportTableBody item={item} key={item.FullName} />;
+                return <ReportTableBody onOpen={onOpen} item={item} key={item.FullName} />;
               })}
             </Tbody>
           </Table>
         </TableContainer>
+        <ReportModal isOpen={isOpen} onClose={onClose} />
       </Box>
     </Box>
   );
