@@ -15,8 +15,8 @@ const linkItems: Array<LinkItemProps> = [
   { name: "Jobs", url: "/dashboard/jobs", icon: HiOutlineBriefcase },
   { name: "Companies", url: "/dashboard/companies", icon: MdOutlineDomain },
   { name: "Talents", url: "/dashboard/talents", icon: MdOutlineGroups2 },
-  { name: "Reports", url: "/dashboard/reports", icon: MdOutlineGroups3 },
   { name: "Forum", url: "/dashboard/forum", icon: RiWechatLine },
+  { name: "Reports", url: "/dashboard/reports", icon: MdOutlineGroups3 },
   { name: "Admins", url: "/dashboard/admins", icon: VscSettings },
   { name: "Settings", url: "/dashboard/settings", icon: IoSettingsOutline },
 ];
