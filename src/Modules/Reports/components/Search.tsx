@@ -10,7 +10,7 @@ import {
 import React from "react";
 import { AiFillCaretDown } from "react-icons/ai";
 
-const Hero = () => {
+const Search = () => {
   return (
     <HStack bg="white" borderRadius="md" py="0.3rem" width="60%" mb="3.5rem">
       <Box
@@ -52,7 +52,7 @@ const Hero = () => {
               alignItems="center"
               gap="2rem"
             >
-              <Text>Company</Text>
+              <Text>country</Text>
               <Box>
                 <AiFillCaretDown />
               </Box>
@@ -69,4 +69,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Search;
