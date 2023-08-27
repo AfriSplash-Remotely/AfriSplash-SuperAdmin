@@ -12,12 +12,17 @@ import { AiFillCaretDown } from "react-icons/ai";
 
 const Search = () => {
   return (
-    <HStack bg="white" borderRadius="md" py="0.3rem" width="60%" mb="3.5rem">
+    <HStack bg="white" borderRadius="12px"
+      py="0.5rem" width="60%"
+      mb="3.5rem"
+      boxShadow="0px 4px 8px 0px rgba(194, 194, 194, 0.20);"
+    >
       <Box
         display="flex"
         width="50%"
         borderInlineEnd="1px"
         borderColor="gray.300"
+        py='.4rem'
       >
         <Menu>
           <MenuButton mx="auto" as={Text}>

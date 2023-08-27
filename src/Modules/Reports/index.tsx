@@ -1,25 +1,16 @@
 import React from "react";
 import {
   Box,
-  Textarea,
-  HStack,
-  Text,
-  Center,
-  MenuButton,
-  Menu,
-  Button,
-  MenuList,
-  MenuItem,
   TableContainer,
   Table,
   Tbody,
   useDisclosure,
 } from "@chakra-ui/react";
-import { AiFillCaretDown } from "react-icons/ai";
 import Search from "./components/Search";
 import ReportTableHeader from "./components/ReportTableHeader";
 import { reportInfo } from "./components/reportTableData";
 import ReportTableBody from "./components/ReportTableBody";
+import { ReportsTableFooter } from "./components/ReportsTableFooter";
 import { ReportTableInfo } from "./components/reports.interface";
 import ReportModal from "./components/ReportModal";
 
@@ -49,6 +40,7 @@ function Reports(): JSX.Element {
               })}
             </Tbody>
           </Table>
+          <ReportsTableFooter />
         </TableContainer>
         <ReportModal isOpen={isOpen} onClose={onClose} />
       </Box>
