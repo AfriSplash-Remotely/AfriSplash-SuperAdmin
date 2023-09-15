@@ -9,6 +9,7 @@ import Dashboard from "./Modules/Dashboard";
 import Jobs from "./Modules/Jobs";
 import Companies from "@/Modules/Companies";
 import Forum from "@/Modules/Forum";
+import Blog from "@/Modules/Blog";
 import SettingsProfile from "@/Modules/Settings";
 import Login from "@/Modules/Login";
 import ForgotPassword from "@/Modules/ForgotPassword";
@@ -53,6 +54,7 @@ export default function Router() {
           <Route path="companies" element={<Companies />} />
           <Route path="talents" element={<Talents />} />
           <Route path="forum" element={<Forum />} />
+          <Route path="blog" element={<Blog />} />
           <Route path="admins" element={<Admins />} />
           <Route path="admins/invite-new-admin" element={<InviteNewAdmin />} />
 
