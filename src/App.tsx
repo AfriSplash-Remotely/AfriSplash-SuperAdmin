@@ -10,6 +10,7 @@ import Jobs from "./Modules/Jobs";
 import Companies from "@/Modules/Companies";
 import Forum from "@/Modules/Forum";
 import Blog from "@/Modules/Blog";
+import AddNewBlog from "@/Modules/AddNewBlog"
 import SettingsProfile from "@/Modules/Settings";
 import Login from "@/Modules/Login";
 import ForgotPassword from "@/Modules/ForgotPassword";
@@ -55,6 +56,7 @@ export default function Router() {
           <Route path="talents" element={<Talents />} />
           <Route path="forum" element={<Forum />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="blog/add-new-blog" element={<AddNewBlog />} />
           <Route path="admins" element={<Admins />} />
           <Route path="admins/invite-new-admin" element={<InviteNewAdmin />} />
 

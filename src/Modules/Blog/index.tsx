@@ -3,8 +3,15 @@ import { Box, Button, SimpleGrid } from '@chakra-ui/react'
 import BlogSearch from './components/blogSearch'
 import BlogCard from './components/blogCard'
 import { BlogData } from './components/mockData'
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function Blog(): JSX.Element {
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate("/dashboard/blog/add-new-blog")
+    }
     return (
         <>
             <Box>
@@ -21,6 +28,7 @@ export default function Blog(): JSX.Element {
                             borderRadius=".5rem"
                             px={{ base: "1.5rem", md: "2rem", lg: "2rem" }}
                             py="1rem"
+                            onClick={handleNavigate}
                         >
                             Create Post
                         </Button>
