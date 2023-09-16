@@ -24,8 +24,7 @@ export default function Blog(): JSX.Element {
                     <Box>
                         <Button
                             _hover={{ bgColor: "primary" }}
-                            _active={{ bgColor: "primary" }}
-                            borderRadius=".5rem"
+                            borderRadius="lg"
                             px={{ base: "1.5rem", md: "2rem", lg: "2rem" }}
                             py="1rem"
                             onClick={handleNavigate}

@@ -5,7 +5,7 @@ export default function BlogSearch(): JSX.Element {
         <Box w='70%'
             px={{ base: "1rem", md: "2rem", lg: "2.5rem" }}
             h={{ base: "3.5rem", md: "3.5rem", lg: "3.438rem" }}
-            bgColor="#ffffff"
+            bgColor="white"
             borderRadius="xl"
             boxShadow="100"
             display='flex'
@@ -16,16 +16,14 @@ export default function BlogSearch(): JSX.Element {
                 <Input type="text"
                     placeholder='search term'
                     _placeholder={{
-                        color: "#676767",
+                        color: "gray.90",
                         fontWeight: "bold",
                     }}
-                    bgColor="#F4F4F4"
-                    borderRadius="0.375rem"
+                    bgColor="gray.110"
+                    borderRadius="md"
                     h={{ lg: "2.188rem" }}
                     w="53rem"
                     border="none"
-
-
 
                 />
             </Box>

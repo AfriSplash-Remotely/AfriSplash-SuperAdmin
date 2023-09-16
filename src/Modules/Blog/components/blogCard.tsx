@@ -9,14 +9,12 @@ const BlogCardProp = {
     read_time: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
     blog_cat: PropTypes.string.isRequired
-
-
-
 }
+
 export default function BlogCard({ image_url, title, createdAt, read_time, summary, blog_cat }: InferProps<typeof BlogCardProp>): JSX.Element {
     return (
         <>
-            <Box bgColor='#fff'
+            <Box bgColor='white'
                 px={{ base: ".8rem", md: ".875rem", lg: "0.875rem" }}
                 py={{ base: "1rem", md: "1rem", lg: "1rem" }} borderRadius='xl'
                 boxShadow='100'
@@ -30,7 +28,7 @@ export default function BlogCard({ image_url, title, createdAt, read_time, summa
                     <Box
                         pos='absolute'
                         bgColor='rgba(255, 196, 45, 0.60)'
-                        color='#000'
+                        color='gray.90'
                         p='0.75rem'
                         right='0'
                         top='0.75rem'
@@ -40,9 +38,9 @@ export default function BlogCard({ image_url, title, createdAt, read_time, summa
                 </Box>
 
                 <Box pt='1rem'>
-                    <Text fontWeight='medium' color='#000' fontSize='lg'>{title}</Text>
-                    <Text py='1rem' color='#000'>{createdAt}   |  {read_time}mins read</Text>
-                    <Text noOfLines={2} color='#000' >{summary}</Text>
+                    <Text fontWeight='medium' color='gray.90' fontSize='lg'>{title}</Text>
+                    <Text py='1rem' color='gray.90'>{createdAt}   |  {read_time}mins read</Text>
+                    <Text noOfLines={2} color='gray.90' >{summary}</Text>
                 </Box>
             </Box>
 

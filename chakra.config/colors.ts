@@ -9,6 +9,7 @@ interface ColorscodeI {
   80: string;
   90: string;
   100: string;
+  110?: string;
 }
 
 interface BaseColorI {
@@ -43,7 +44,7 @@ const colors: SystemColorType = {
   error: "#C20222",
   primary: "#0D5520",
   primaryLight: "#D6ECDC",
-  accent: "FFC42D",
+  accent: "#FFC42D",
   gray: {
     10: "#FAFAFA",
     20: "#F3F4F6",
@@ -55,6 +56,7 @@ const colors: SystemColorType = {
     80: "#374151",
     90: "#1F2937",
     100: "#F9FAFB",
+    110: "#F4F4F4",
   },
 
   green: {
@@ -68,6 +70,7 @@ const colors: SystemColorType = {
     80: "#4EA24D",
     90: "#389737",
     100: "#228B21",
+    110: "#0D5520",
   },
   amber: {
     10: "#FFF8E6",
@@ -80,6 +83,7 @@ const colors: SystemColorType = {
     80: "#FDC933",
     90: "#FCC31A",
     100: "#FCBC00",
+    110: "#FDF1C9",
   },
   red: {
     10: "#F9E6E9",
