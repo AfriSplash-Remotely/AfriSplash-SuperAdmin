@@ -22,7 +22,7 @@ export default function BlogSearch(): JSX.Element {
                     bgColor="#F4F4F4"
                     borderRadius="0.375rem"
                     h={{ lg: "2.188rem" }}
-                    w={{ lg: "18.625rem", "2xl": "20rem" }}
+                    w="53rem"
                     border="none"
 
 

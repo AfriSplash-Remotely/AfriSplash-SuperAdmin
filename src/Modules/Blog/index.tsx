@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Button, SimpleGrid } from '@chakra-ui/react'
 import BlogSearch from './components/blogSearch'
 import BlogCard from './components/blogCard'
+import { BlogData } from './components/mockData'
 
 export default function Blog(): JSX.Element {
     return (
@@ -32,7 +33,10 @@ export default function Blog(): JSX.Element {
                         columns={{ base: 1, sm: 1, md: 1, lg: 3, "2xl": 4 }}
                         spacing={{ base: "1.5rem", md: "2rem", lg: "2rem" }}
                     >
-                        <BlogCard />
+                        {BlogData.map((blog, index) => (
+                            <BlogCard  {...blog} key={index} />
+
+                        ))}
                     </SimpleGrid>
 
                 </Box>

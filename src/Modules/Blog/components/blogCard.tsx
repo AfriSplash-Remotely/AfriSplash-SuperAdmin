@@ -1,6 +1,19 @@
 import React from 'react'
 import { Box, Image, Text } from '@chakra-ui/react'
-export default function BlogCard() {
+import PropTypes, { InferProps } from "prop-types";
+
+const BlogCardProp = {
+    image_url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    read_time: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
+    blog_cat: PropTypes.string.isRequired
+
+
+
+}
+export default function BlogCard({ image_url, title, createdAt, read_time, summary, blog_cat }: InferProps<typeof BlogCardProp>): JSX.Element {
     return (
         <>
             <Box bgColor='#fff'
@@ -12,7 +25,7 @@ export default function BlogCard() {
                 flexDir="column"
             >
                 <Box pos='relative'>
-                    <Image borderRadius='2xl' src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
+                    <Image borderRadius='2xl' src={image_url} alt={title} />
 
                     <Box
                         pos='absolute'
@@ -23,14 +36,13 @@ export default function BlogCard() {
                         top='0.75rem'
                         borderTopLeftRadius='2xl'
                         borderBottomLeftRadius='2xl'
-                    >loooror kekek</Box>
+                    >{blog_cat}</Box>
                 </Box>
 
                 <Box pt='1rem'>
-                    <Text fontWeight='medium' color='#000' fontSize='lg'>Product Design</Text>
-                    <Text py='1rem' color='#000'>May 30   |  3mins read</Text>
-                    <Text noOfLines={2} color='#000' >5 Tips For A Product Manager To
-                        Ensure Great Collaboration jejejeujejeju</Text>
+                    <Text fontWeight='medium' color='#000' fontSize='lg'>{title}</Text>
+                    <Text py='1rem' color='#000'>{createdAt}   |  {read_time}mins read</Text>
+                    <Text noOfLines={2} color='#000' >{summary}</Text>
                 </Box>
             </Box>
 
