@@ -7,6 +7,7 @@ import { HiOutlineBriefcase } from "react-icons/hi";
 import { RiWechatLine } from "react-icons/ri";
 import { VscSettings } from "react-icons/vsc";
 import { IoSettingsOutline } from "react-icons/io5";
+import { GiNotebook } from "react-icons/gi";
 import { LinkItemProps } from ".";
 
 const linkItems: Array<LinkItemProps> = [
@@ -15,6 +16,7 @@ const linkItems: Array<LinkItemProps> = [
   { name: "Companies", url: "/dashboard/companies", icon: MdOutlineDomain },
   { name: "Talents", url: "/dashboard/talents", icon: MdOutlineGroups2 },
   { name: "Forum", url: "/dashboard/forum", icon: RiWechatLine },
+  { name: "Blog", url: "/dashboard/blog", icon: GiNotebook },
   { name: "Admins", url: "/dashboard/admins", icon: VscSettings },
   { name: "Settings", url: "/dashboard/settings", icon: IoSettingsOutline },
 ];
