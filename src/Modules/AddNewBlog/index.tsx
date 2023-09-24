@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Input, Button } from '@chakra-ui/react'
 import BlogCoverImage from './blogCoverImage'
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 export default function AddNewBlog(): JSX.Element {
+    const [value, setValue] = useState<string>('')
     return (
         <>
             <Box mt={{ base: "1rem", md: "2rem", lg: "3rem" }}
@@ -51,12 +55,11 @@ export default function AddNewBlog(): JSX.Element {
                     <Box mt='2rem'
                         bgColor='white'
                         border='1px dashed #C1C1C1'
-                        p='2rem'
+                        p='.5rem'
                         w='80%'
                         borderRadius='2xl'
-
                     >
-                        blog content
+                        <ReactQuill theme='snow' placeholder='Write your post content here....' value={value} onChange={setValue} />
                     </Box>
                 </Box>
 

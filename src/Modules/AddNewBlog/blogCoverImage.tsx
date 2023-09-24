@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import { Box, Button, Image } from '@chakra-ui/react'
 import camera from "@/assets/camera-plus-outline.svg"
 
 export default function BlogCoverImage() {
+    const inputRef = useRef<HTMLInputElement>(null)
+    const [blogImage, setBlogImage] = useState({ preview: "", raw: "" })
+
+    const handleClick = () => {
+        inputRef.current?.click()
+    }
+    const handleChange = (e: any) => {
+        if (e.target.files.length) {
+            setBlogImage({
+                preview: URL.createObjectURL(e.target.files[0]),
+                raw: e.target.files[0]
+            })
+        }
+    }
+
     return (
         <>
             <Box bgColor='gray.30'
@@ -15,21 +30,34 @@ export default function BlogCoverImage() {
                 justifyContent='center'
                 alignItems='center'
             >
-                <Button borderRadius='lg'
-                    bgColor='white'
-                    color='gray.90'
-                    display='flex'
-                    gap='.7rem'
-                    px={{ base: "1.5rem", md: "2rem", lg: "2rem" }}
-                    py='1rem'
-                    _hover={{
-                        opacity: 0.8,
-                        boxShadow: '100'
-                    }}
-                >
-                    <Image src={camera} alt="camera" />
-                    Add Cover Image
-                </Button>
+                {blogImage.preview ? (
+                    <Image src={blogImage.preview} alt='blogImage' h='100%' w='100%' objectFit='fill' />
+                ) : (<>
+
+                    <Button
+                        onClick={handleClick}
+                        borderRadius='lg'
+                        bgColor='white'
+                        color='gray.90'
+                        display='flex'
+                        gap='.7rem'
+                        px={{ base: "1.5rem", md: "2rem", lg: "2rem" }}
+                        py='1rem'
+                        _hover={{
+                            opacity: 0.8,
+                            boxShadow: '100'
+                        }}
+                    >
+                        <Image src={camera} alt="camera" />
+                        Add Cover Image
+                    </Button>
+                    <input type="file" accept="image/*"
+                        ref={inputRef} style={{ display: 'none' }}
+                        onChange={handleChange}
+                    />
+
+                </>)
+                }
 
             </Box>
 
